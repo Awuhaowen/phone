@@ -64,7 +64,6 @@ export default {
       var url = "http://127.0.0.1:4000/Login";
       var obj = { uname: this.username, upwd: this.password };
       this.axios.get(url, { params: obj }).then(res => {
-        console.log(res);
         if (res.data.code < 0) {
           Dialog.alert({ message: "用户名或密码有误" });
         } else {
